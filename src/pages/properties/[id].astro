@@ -4,6 +4,8 @@ import Navigation from '../../components/Navigation.astro';
 import Footer from '../../components/Footer.astro';
 import { supabase, type Property } from '../../lib/supabaseClient';
 
+export const prerender = false;
+
 const { id } = Astro.params;
 
 let displayProperty: Property | null = null;

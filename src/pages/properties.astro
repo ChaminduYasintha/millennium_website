@@ -4,6 +4,9 @@ import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import { supabase, type Property } from '../lib/supabaseClient';
 
+export const prerender = false;
+
+
 // Fetch properties from Supabase
 let properties: Property[] = [];
 let error: string | null = null;

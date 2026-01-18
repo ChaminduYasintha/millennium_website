@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import AdminDashboard from "../components/admin/AdminDashboard.jsx";
 
 // We don't fetch anything here because the AdminDashboard handles everything client-side.
+export const prerender = true;
 ---
 
 <BaseLayout
