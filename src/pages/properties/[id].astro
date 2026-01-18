@@ -4,31 +4,25 @@ import Navigation from '../../components/Navigation.astro';
 import Footer from '../../components/Footer.astro';
 import { supabase, type Property } from '../../lib/supabaseClient';
 
-export async function getStaticPaths() {
-  const { data: properties } = await supabase.from('properties').select('*');
-  
-  // Handle empty or error case
-  if (!properties) {
-    return [];
-  }
-  
-  return properties.map((property) => {
-    return {
-      params: { id: property.id },
-      props: { property },
-    };
-  });
-}
-
-const { property } = Astro.props as { property: Property };
 const { id } = Astro.params;
 
-// Fallback if property prop is missing (e.g. if we switch to SSR later)
-// This part is just a safety measure
-let displayProperty = property;
-if (!displayProperty && id) {
-  const { data } = await supabase.from('properties').select('*').eq('id', id).single();
-  if (data) displayProperty = data;
+let displayProperty: Property | null = null;
+
+if (id) {
+  const { data, error } = await supabase
+    .from('properties')
+    .select('*')
+    .eq('id', id)
+    .single();
+    
+    if (data) {
+        displayProperty = data;
+    } else {
+        console.error("Error fetching property or property not found:", error);
+        Astro.response.status = 404;
+    }
+} else {
+    Astro.response.status = 404;
 }
 
 const title = displayProperty ? `${displayProperty.title} in ${displayProperty.location}` : 'Property Details';
