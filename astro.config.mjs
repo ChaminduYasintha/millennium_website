@@ -9,8 +9,8 @@ import react from '@astrojs/react';
 export default defineConfig({
     integrations: [tailwind(), react()],
     // For Cloudflare Pages deployment, uncomment the following:
-    // output: 'hybrid',
-    // adapter: cloudflare(),
+    output: 'server',
+    adapter: cloudflare(),
 
     // For local development, keep it simple (no adapter needed)
 });
