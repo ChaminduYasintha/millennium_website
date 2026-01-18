@@ -1,0 +1,460 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout
+    title="Construction & Design Services - Light Theme Example"
+    description="Professional construction services with 3D visualizations"
+>
+    <Navigation />
+
+    <!-- Hero Section - LIGHT THEME -->
+    <section
+        class="pt-32 pb-16 bg-gradient-to-b from-white to-brand-light-gray"
+    >
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto">
+                <span
+                    class="inline-block px-4 py-2 bg-brand-cyan/10 text-brand-cyan rounded-full text-sm font-semibold mb-4"
+                >
+                    🏗️ Construction & Design
+                </span>
+                <h1
+                    class="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-text mb-6"
+                >
+                    Building Excellence with <span class="text-brand-cyan"
+                        >Quality & Precision</span
+                    >
+                </h1>
+                <p class="text-xl text-brand-text-light">
+                    From concept to completion, we deliver construction projects
+                    that exceed expectations
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D VISUALIZATION SECTION - NEW! -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span
+                    class="inline-block px-4 py-2 bg-brand-cyan/10 text-brand-cyan rounded-full text-sm font-semibold mb-4"
+                >
+                    🎯 3D Visualization
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-text mb-6">
+                    Explore Your Dream Home in 3D
+                </h2>
+                <p class="text-xl text-brand-text-light max-w-2xl mx-auto">
+                    Experience your future property before construction begins
+                    with our interactive 3D models
+                </p>
+            </div>
+
+            <!-- 3D Model Container -->
+            <div class="max-w-5xl mx-auto">
+                <div
+                    class="bg-gradient-to-br from-brand-light-gray to-white p-8 rounded-2xl border-2 border-brand-cyan/20 shadow-xl"
+                >
+                    <!-- Placeholder for 3D viewer -->
+                    <div
+                        class="aspect-video bg-gradient-to-br from-gray-100 to-gray-50 rounded-xl flex items-center justify-center border border-gray-200"
+                    >
+                        <div class="text-center p-8">
+                            <div
+                                class="w-20 h-20 mx-auto mb-4 bg-brand-cyan/10 rounded-full flex items-center justify-center"
+                            >
+                                <svg
+                                    class="w-10 h-10 text-brand-cyan"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-text mb-2">
+                                3D Model Viewer
+                            </h3>
+                            <p class="text-brand-text-light mb-6">
+                                Integrate with Spline, Three.js, or SketchFab<br
+                                />
+                                See <code class="bg-gray-200 px-2 py-1 rounded"
+                                    >3D_INTEGRATION_GUIDE.md</code
+                                > for details
+                            </p>
+
+                            <!-- Example: Spline Embed (Replace URL with your own) -->
+                            <!-- <iframe 
+                                src='https://my.spline.design/YOUR-SCENE-ID'
+                                frameborder='0'
+                                width='100%'
+                                height='600px'
+                                class="rounded-lg"
+                            ></iframe> -->
+                        </div>
+                    </div>
+
+                    <!-- 3D Controls Info -->
+                    <div
+                        class="mt-6 flex items-center justify-center gap-6 text-sm text-brand-text-light"
+                    >
+                        <div class="flex items-center gap-2">
+                            <svg
+                                class="w-5 h-5 text-brand-cyan"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
+                                ></path>
+                            </svg>
+                            <span>Click & Drag to Rotate</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg
+                                class="w-5 h-5 text-brand-cyan"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                                ></path>
+                            </svg>
+                            <span>Scroll to Zoom</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3D Features Grid -->
+            <div class="grid md:grid-cols-3 gap-6 mt-12 max-w-5xl mx-auto">
+                <div
+                    class="bg-white p-6 rounded-xl border border-gray-200 shadow-md hover:shadow-lg transition-shadow"
+                >
+                    <div
+                        class="w-12 h-12 bg-brand-cyan/10 rounded-lg flex items-center justify-center mb-4"
+                    >
+                        <svg
+                            class="w-6 h-6 text-brand-cyan"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                            ></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-text mb-2">
+                        Realistic Renders
+                    </h3>
+                    <p class="text-brand-text-light">
+                        Photorealistic 3D visualizations of your project
+                    </p>
+                </div>
+
+                <div
+                    class="bg-white p-6 rounded-xl border border-gray-200 shadow-md hover:shadow-lg transition-shadow"
+                >
+                    <div
+                        class="w-12 h-12 bg-brand-cyan/10 rounded-lg flex items-center justify-center mb-4"
+                    >
+                        <svg
+                            class="w-6 h-6 text-brand-cyan"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-text mb-2">
+                        Interactive Tours
+                    </h3>
+                    <p class="text-brand-text-light">
+                        Walk through your home before it's built
+                    </p>
+                </div>
+
+                <div
+                    class="bg-white p-6 rounded-xl border border-gray-200 shadow-md hover:shadow-lg transition-shadow"
+                >
+                    <div
+                        class="w-12 h-12 bg-brand-cyan/10 rounded-lg flex items-center justify-center mb-4"
+                    >
+                        <svg
+                            class="w-6 h-6 text-brand-cyan"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+                            ></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-brand-text mb-2">
+                        Floor Plans
+                    </h3>
+                    <p class="text-brand-text-light">
+                        Explore layouts in detailed 3D views
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Construction Services - LIGHT THEME -->
+    <section class="py-20 bg-brand-light-gray">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <h2
+                class="text-3xl md:text-4xl font-bold text-brand-text mb-12 text-center"
+            >
+                Our Construction Services
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Complete House Construction -->
+                <div
+                    class="bg-white p-8 rounded-2xl border border-gray-200 shadow-lg hover:shadow-xl transition-all hover:border-brand-cyan"
+                >
+                    <div
+                        class="w-16 h-16 bg-brand-cyan/10 rounded-xl flex items-center justify-center mb-6"
+                    >
+                        <svg
+                            class="w-8 h-8 text-brand-cyan"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                            ></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-text mb-4">
+                        Complete House Construction
+                    </h3>
+                    <p class="text-brand-text-light mb-6">
+                        Full-service residential construction from foundation to
+                        finishing. We handle every aspect of your dream home
+                        with precision and care.
+                    </p>
+                    <ul class="space-y-2 text-sm text-brand-text-light">
+                        <li class="flex items-center">
+                            <svg
+                                class="w-4 h-4 text-brand-cyan mr-2 flex-shrink-0"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            Foundation to roof completion
+                        </li>
+                        <li class="flex items-center">
+                            <svg
+                                class="w-4 h-4 text-brand-cyan mr-2 flex-shrink-0"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            High-quality materials
+                        </li>
+                        <li class="flex items-center">
+                            <svg
+                                class="w-4 h-4 text-brand-cyan mr-2 flex-shrink-0"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            Professional team
+                        </li>
+                        <li class="flex items-center">
+                            <svg
+                                class="w-4 h-4 text-brand-cyan mr-2 flex-shrink-0"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            On-time delivery guarantee
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Renovations & Extensions -->
+                <div
+                    class="bg-white p-8 rounded-2xl border border-gray-200 shadow-lg hover:shadow-xl transition-all hover:border-brand-cyan"
+                >
+                    <div
+                        class="w-16 h-16 bg-brand-cyan/10 rounded-xl flex items-center justify-center mb-6"
+                    >
+                        <svg
+                            class="w-8 h-8 text-brand-cyan"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                            ></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-text mb-4">
+                        Renovations & Extensions
+                    </h3>
+                    <p class="text-brand-text-light mb-6">
+                        Transform and modernize your existing property with our
+                        expert renovation and extension services.
+                    </p>
+                    <ul class="space-y-2 text-sm text-brand-text-light">
+                        <li class="flex items-center">
+                            <svg
+                                class="w-4 h-4 text-brand-cyan mr-2 flex-shrink-0"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            Kitchen & bathroom upgrades
+                        </li>
+                        <li class="flex items-center">
+                            <svg
+                                class="w-4 h-4 text-brand-cyan mr-2 flex-shrink-0"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            Additional rooms & floors
+                        </li>
+                        <li class="flex items-center">
+                            <svg
+                                class="w-4 h-4 text-brand-cyan mr-2 flex-shrink-0"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            Structural modifications
+                        </li>
+                        <li class="flex items-center">
+                            <svg
+                                class="w-4 h-4 text-brand-cyan mr-2 flex-shrink-0"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                            >
+                                <path
+                                    fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            Modern design integration
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section - LIGHT THEME -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-brand-text mb-6">
+                Ready to Start Your Project?
+            </h2>
+            <p class="text-xl text-brand-text-light mb-8 max-w-2xl mx-auto">
+                Get in touch with us today for a free consultation and quotation
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                    href="https://wa.me/94778778109?text=I'm interested in construction services"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="px-8 py-4 bg-brand-cyan hover:bg-brand-blue-dark text-white font-bold rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 inline-flex items-center justify-center"
+                >
+                    <svg
+                        class="w-5 h-5 mr-2"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                        ></path>
+                    </svg>
+                    Contact on WhatsApp
+                </a>
+
+                <a
+                    href="/contact"
+                    class="px-8 py-4 bg-white border-2 border-brand-cyan text-brand-cyan hover:bg-brand-cyan hover:text-white font-bold rounded-xl shadow-md hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+                >
+                    Send Inquiry
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <Footer />
+</BaseLayout>

@@ -1,16 +1,19 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navigation from "../components/Navigation.astro";
+import Hero from "../components/Hero.astro";
+import FeaturedHouse from "../components/FeaturedHouse.astro";
+import ServicesGrid from "../components/ServicesGrid.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout
+	title="Home - Building Dreams, Creating Futures"
+	description="Millennium Property Development (Pvt) Ltd - Your trusted partner with 17+ years of experience in Kandy's real estate, construction, land sales, and property development."
+>
+	<Navigation />
+	<Hero />
+	<FeaturedHouse />
+	<ServicesGrid />
+	<Footer />
+</BaseLayout>

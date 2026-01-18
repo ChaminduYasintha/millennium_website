@@ -1,0 +1,310 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout
+    title="Contact Us - Get in Touch"
+    description="Contact Millennium Property Development in Kandy. Visit our office at 190/2/A, Kotugodalla Street or call us at +94 778 778 109."
+>
+    <Navigation />
+
+    <section
+        class="pt-32 pb-20 bg-gradient-to-b from-navy-darker via-navy-dark to-navy-darker min-h-screen"
+    >
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span
+                    class="inline-block px-5 py-2 bg-gold/10 border border-gold/30 text-gold rounded-full text-sm font-semibold mb-4"
+                >
+                    📞 Get in Touch
+                </span>
+                <h1
+                    class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
+                >
+                    Contact <span class="text-gold">Us</span>
+                </h1>
+                <p class="text-xl text-cream/80">
+                    Let's discuss your property needs and aspirations
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <div
+                        class="bg-navy-light/50 backdrop-blur-sm p-8 rounded-2xl border-2 border-gold/20"
+                    >
+                        <h2 class="text-2xl font-bold text-white mb-6">
+                            Contact Information
+                        </h2>
+
+                        <div class="space-y-6">
+                            {
+                                [
+                                    {
+                                        icon: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z",
+                                        title: "Head Office",
+                                        content:
+                                            "190/2/A, Kotugodalla Street,<br/>Kandy, Sri Lanka",
+                                        type: "text",
+                                    },
+                                    {
+                                        icon: "M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z",
+                                        title: "Phone",
+                                        content: "+94 778 778 109",
+                                        type: "phone",
+                                    },
+                                    {
+                                        icon: "M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
+                                        title: "Email",
+                                        content: "info@millenniumproperty.lk",
+                                        type: "email",
+                                    },
+                                ].map((item) => (
+                                    <div class="flex items-start space-x-4">
+                                        <div class="w-12 h-12 bg-gold/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <svg
+                                                class="w-6 h-6 text-gold"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                    d={item.icon}
+                                                />
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <h3 class="text-white font-semibold mb-1">
+                                                {item.title}
+                                            </h3>
+                                            {item.type === "text" && (
+                                                <p
+                                                    class="text-cream/70"
+                                                    set:html={item.content}
+                                                />
+                                            )}
+                                            {item.type === "phone" && (
+                                                <a
+                                                    href={`tel:${item.content.replace(/\\s/g, "")}`}
+                                                    class="text-gold hover:underline"
+                                                >
+                                                    {item.content}
+                                                </a>
+                                            )}
+                                            {item.type === "email" && (
+                                                <a
+                                                    href={`mailto:${item.content}`}
+                                                    class="text-gold hover:underline"
+                                                >
+                                                    {item.content}
+                                                </a>
+                                            )}
+                                        </div>
+                                    </div>
+                                ))
+                            }
+
+                            <div class="flex items-start space-x-4">
+                                <div
+                                    class="w-12 h-12 bg-gold/10 rounded-lg flex items-center justify-center flex-shrink-0"
+                                >
+                                    <svg
+                                        class="w-6 h-6 text-gold"
+                                        fill="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                                        ></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-white font-semibold mb-1">
+                                        WhatsApp
+                                    </h3>
+                                    <a
+                                        href="https://wa.me/94778778109"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="text-gold hover:underline"
+                                        >Chat with Sanjeewa</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Business Hours -->
+                    <div
+                        class="bg-navy-light/50 backdrop-blur-sm p-8 rounded-2xl border-2 border-gold/20"
+                    >
+                        <h2 class="text-2xl font-bold text-white mb-6">
+                            Business Hours
+                        </h2>
+                        <div class="space-y-3 text-cream/80">
+                            <div class="flex justify-between">
+                                <span>Monday - Friday:</span>
+                                <span class="text-white font-semibold"
+                                    >8:00 AM - 6:00 PM</span
+                                >
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Saturday:</span>
+                                <span class="text-white font-semibold"
+                                    >9:00 AM - 4:00 PM</span
+                                >
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Sunday:</span>
+                                <span class="text-white font-semibold"
+                                    >By Appointment</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Contact Form -->
+                <div
+                    class="bg-navy-light/50 backdrop-blur-sm p-8 rounded-2xl border-2 border-gold/20"
+                >
+                    <h2 class="text-2xl font-bold text-white mb-6">
+                        Send us a Message
+                    </h2>
+
+                    <form class="space-y-6" id="contact-form">
+                        <div>
+                            <label
+                                for="name"
+                                class="block text-sm font-medium text-cream/80 mb-2"
+                                >Your Name</label
+                            >
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                required
+                                class="w-full px-4 py-3 bg-navy-dark border border-gold/20 rounded-lg text-white placeholder-cream/40 focus:outline-none focus:border-gold transition-colors"
+                                placeholder="John Doe"
+                            />
+                        </div>
+
+                        <div>
+                            <label
+                                for="phone"
+                                class="block text-sm font-medium text-cream/80 mb-2"
+                                >Phone Number</label
+                            >
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                required
+                                class="w-full px-4 py-3 bg-navy-dark border border-gold/20 rounded-lg text-white placeholder-cream/40 focus:outline-none focus:border-gold transition-colors"
+                                placeholder="+94 XXX XXX XXX"
+                            />
+                        </div>
+
+                        <div>
+                            <label
+                                for="email"
+                                class="block text-sm font-medium text-cream/80 mb-2"
+                                >Email (Optional)</label
+                            >
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                class="w-full px-4 py-3 bg-navy-dark border border-gold/20 rounded-lg text-white placeholder-cream/40 focus:outline-none focus:border-gold transition-colors"
+                                placeholder="john@example.com"
+                            />
+                        </div>
+
+                        <div>
+                            <label
+                                for="interest"
+                                class="block text-sm font-medium text-cream/80 mb-2"
+                                >I'm interested in</label
+                            >
+                            <select
+                                id="interest"
+                                name="interest"
+                                class="w-full px-4 py-3 bg-navy-dark border border-gold/20 rounded-lg text-white focus:outline-none focus:border-gold transition-colors"
+                            >
+                                <option value="land">Land Purchase</option>
+                                <option value="construction"
+                                    >House Construction</option
+                                >
+                                <option value="renovation">Renovation</option>
+                                <option value="design">2D/3D Design</option>
+                                <option value="qs">Quantity Surveying</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label
+                                for="message"
+                                class="block text-sm font-medium text-cream/80 mb-2"
+                                >Message</label
+                            >
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="4"
+                                required
+                                class="w-full px-4 py-3 bg-navy-dark border border-gold/20 rounded-lg text-white placeholder-cream/40 focus:outline-none focus:border-gold transition-colors resize-none"
+                                placeholder="Tell us about your requirements..."
+                            ></textarea>
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="w-full px-6 py-4 bg-gold hover:bg-gold-light text-navy-dark font-bold rounded-lg transform hover:scale-105 transition-all duration-300"
+                        >
+                            Send Message
+                        </button>
+                    </form>
+
+                    <p class="text-center text-sm text-cream/60 mt-6">
+                        Or reach us directly on <a
+                            href="https://wa.me/94778778109"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-gold hover:underline">WhatsApp</a
+                        >
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <Footer />
+</BaseLayout>
+
+<script>
+    const form = document.getElementById("contact-form");
+
+    form?.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form as HTMLFormElement);
+        const name = formData.get("name");
+        const phone = formData.get("phone");
+        const interest = formData.get("interest");
+        const message = formData.get("message");
+
+        // Create WhatsApp message
+        const whatsappMessage = `Hello! I'm ${name}.\\n\\nI'm interested in: ${interest}\\n\\nMessage: ${message}\\n\\nMy contact: ${phone}`;
+        const whatsappUrl = `https://wa.me/94778778109?text=${encodeURIComponent(whatsappMessage)}`;
+
+        // Open WhatsApp
+        window.open(whatsappUrl, "_blank");
+    });
+</script>

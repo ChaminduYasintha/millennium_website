@@ -1,0 +1,31 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import AdminDashboard from "../components/admin/AdminDashboard.jsx";
+
+// We don't fetch anything here because the AdminDashboard handles everything client-side.
+---
+
+<BaseLayout
+    title="Admin Portal - Millennium Property"
+    description="Secure admin access for property management."
+>
+    <div class="min-h-screen bg-navy-darker flex flex-col pt-32 pb-20">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex-grow">
+            <div class="mb-8">
+                <h1 class="text-3xl font-bold text-gold mb-2">
+                    Property Management System
+                </h1>
+                <p class="text-cream/60">
+                    Manage your real estate listings securely.
+                </p>
+            </div>
+
+            <div
+                class="bg-navy-dark/50 p-1 rounded-2xl border border-gold/10 min-h-[600px]"
+            >
+                <!-- Client-Side Rendered Dashboard -->
+                <AdminDashboard client:only="react" />
+            </div>
+        </div>
+    </div>
+</BaseLayout>
