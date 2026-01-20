@@ -3,7 +3,7 @@
 ---
 
 <section
-    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-navy-darker via-navy-dark to-navy"
+    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-navy-darker via-navy-dark to-navy py-3"
 >
     <!-- Elegant Background Pattern -->
     <div class="absolute inset-0 opacity-10">
@@ -25,7 +25,7 @@
     >
     </div>
 
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-2">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
             <!-- Left Content -->
             <div class="text-center lg:text-left space-y-8">
@@ -49,7 +49,7 @@
 
                 <!-- Main Headline -->
                 <h1
-                    class="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight"
+                    class="text-4xl sm:text-6xl lg:text-7xl font-bold leading-tight"
                 >
                     <span class="text-white"> Building Dreams, </span>
                     <br />
@@ -101,23 +101,29 @@
 
                 <!-- Stats -->
                 <div
-                    class="grid grid-cols-3 gap-6 pt-8 border-t border-gold/20"
+                    class="grid grid-cols-3 gap-2 sm:gap-6 pt-8 border-t border-gold/20"
                 >
                     <div class="text-center lg:text-left">
-                        <div class="text-3xl font-bold text-gold">17+</div>
-                        <div class="text-sm text-cream/70">
+                        <div class="text-2xl sm:text-3xl font-bold text-gold">
+                            17+
+                        </div>
+                        <div class="text-xs sm:text-sm text-cream/70">
                             Years Experience
                         </div>
                     </div>
                     <div class="text-center lg:text-left">
-                        <div class="text-3xl font-bold text-gold">500+</div>
-                        <div class="text-sm text-cream/70">
+                        <div class="text-2xl sm:text-3xl font-bold text-gold">
+                            500+
+                        </div>
+                        <div class="text-xs sm:text-sm text-cream/70">
                             Projects Completed
                         </div>
                     </div>
                     <div class="text-center lg:text-left">
-                        <div class="text-3xl font-bold text-gold">100%</div>
-                        <div class="text-sm text-cream/70">
+                        <div class="text-2xl sm:text-3xl font-bold text-gold">
+                            100%
+                        </div>
+                        <div class="text-xs sm:text-sm text-cream/70">
                             Client Satisfaction
                         </div>
                     </div>
@@ -125,11 +131,11 @@
             </div>
 
             <!-- Right Visual -->
-            <div class="relative hidden lg:block">
-                <div class="relative z-10">
+            <div class="relative block mt-12 lg:mt-0 lg:block">
+                <div class="relative z-10 p-2 sm:p-0">
                     <!-- Luxury Image -->
                     <div
-                        class="aspect-square rounded-2xl bg-gradient-to-br from-navy-light/50 to-navy/50 backdrop-blur-lg border-2 border-gold/30 p-2 flex items-center justify-center shadow-2xl shadow-gold/20 overflow-hidden"
+                        class="aspect-video lg:aspect-square rounded-2xl bg-gradient-to-br from-navy-light/50 to-navy/50 backdrop-blur-lg border-2 border-gold/30 p-2 flex items-center justify-center shadow-2xl shadow-gold/20 overflow-hidden"
                     >
                         <img
                             src="/hero-image.png"
@@ -139,13 +145,13 @@
                     </div>
                 </div>
 
-                <!-- Gold Accent Rings -->
+                <!-- Gold Accent Rings - Hidden on very small screens to prevent overflow -->
                 <div
-                    class="absolute -top-6 -right-6 w-24 h-24 border-4 border-gold/30 rounded-full"
+                    class="hidden sm:block absolute -top-6 -right-6 w-24 h-24 border-4 border-gold/30 rounded-full"
                 >
                 </div>
                 <div
-                    class="absolute -bottom-6 -left-6 w-32 h-32 border-4 border-gold/20 rounded-full"
+                    class="hidden sm:block absolute -bottom-6 -left-6 w-32 h-32 border-4 border-gold/20 rounded-full"
                 >
                 </div>
             </div>
